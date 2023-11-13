@@ -1,0 +1,9 @@
+CREATE EXTERNAL TABLE your_table_name
+(
+    column1 datatype1,
+    column2 datatype2,
+    -- add more columns as needed
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION 's3 location';
