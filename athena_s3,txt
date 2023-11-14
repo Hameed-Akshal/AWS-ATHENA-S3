@@ -7,3 +7,23 @@ CREATE EXTERNAL TABLE your_table_name
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 LOCATION 's3 location';
+
+
+---
+
+
+CREATE EXTERNAL TABLE IF NOT EXISTS `awsdew`.`demoTest` (
+  product_id string,
+  title string,
+  availability string,
+  brand string,
+  categories string,
+  price varchar,
+  seller_id string,
+  seller_name string,
+  url string
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+LOCATION 's3://outputdemo54/input/'
+TBLPROPERTIES ('classification' = 'parquet');
